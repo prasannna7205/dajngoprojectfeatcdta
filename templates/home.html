@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if my_user %}
+    <table>
+        <thead>
+            <th>name</th>
+            <th>eno</th>
+            <th>esal</th>
+            <th>addrs</th>
+        </thead>
+        {% for i in my_user %}
+        <tbody>
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.eno}}</td>
+                <td>{{i.esal}}</td>
+                <td>{{i.addrs}}</td>
+            </tr>
+        </tbody>
+        {%endfor%}
+    </table>
+    {%else%}
+    <h1>no employees data</h1>
+    {%endif%}
+</body>
+</html>
